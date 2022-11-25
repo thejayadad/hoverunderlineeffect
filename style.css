@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: sans-serif;
+    background: black;
+}
+h1{
+    color: #222;
+
+}
+
+h2{
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+    margin: 100px auto;
+    color: #222;
+}
+h2::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: orangered;
+    transition: .3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+
+}
+
+h2:hover::after{
+    transform: scaleX(1);
+    color: white;
+}
